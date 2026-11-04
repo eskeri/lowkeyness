@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I like video games</title>
+    <style>
+        body { font-family: sans-serif; max-width: 900px; margin: 0 auto; padding: 16px; line-height: 1.5; }
+        h2 { margin-bottom: 4px; }
+        section { margin-bottom: 20px; }
+        ul { margin-top: 4px; }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 20px;">
+        <p>Go to <a href="https://eskeri.github.io/lowkeyness/150/CentroidsMap.html" target="_blank">https://eskeri.github.io/lowkeyness/150/CentroidsMap.html</a></p>
+
+        <p>Newest 100 video mode is here too, the top one uses 150 videos, metrics are the same:</p>
+
+        <p><a href="https://eskeri.github.io/lowkeyness/100/CentroidsMap.html" target="_blank">https://eskeri.github.io/lowkeyness/100/CentroidsMap.html</a></p>
+
+        <p>I feel like this mode got better semantic clusterings. You decide.</p>
+
+        <p>Use the clustering to get random videos from the whole corpus <a href="https://eskeri.github.io/i-m-not-a-youtuberologist/" target="_blank">https://eskeri.github.io/i-m-not-a-youtuberologist/</a></p>
+
+        <p>Map and results were created by smoresaretasty. This webpage, random vid thing, and gathering much of the corpus was by me.</p>
+
+    </div>
+
+    <section>
+        <h2>Quick directions:</h2>
+        <p>Important: there are a ton of confounds such as: NPC dialogue, streamer chat, non gaming videos, sponsorship/merch segments.</p>
+        <p>This map excludes videos under 8 minutes and excludes livestreams. Livestream clips slip in many times.</p>
+        <p>I recommend never focusing on channels with high confounds, like indie horror and AAA game focused channels.</p>
+        <p>a lot of channels with big fanbases are heavily confounded</p>
+        <p>But check out channels like VanossGaming and Smii7y, they don't have too much confounds. They do have some sponsorship segments so note that.</p>
+        <ul>
+            <li>You can drag the panels in CentroidsMap. the grey bar on top of each panel allows you to move it around.</li>
+            <li>You can resize panels by holding the /// on the bottom right corner of the panels.</li>
+            <li>If a panel is moved in a way it cannot be dragged back, you can press the "Reset Panels" button on the bottom right of the map.</li>
+        </ul>
+    </section>
+
+    <section>
+        <ul>
+            <li>The tools to navigate the map are on the top right. Left of the Color Scale panel.</li>
+            <li>Please do not confuse Color Scale zoom in/out with the map navigation tools.</li>
+        </ul>
+    </section>
+
+    <section>
+        <ul>
+            <li>Semantic mode is heavily on metrics, which from what I recall are computed on the last 1 million words of a channel.</li>
+            <li>If a channel does not have 1 million words it is excluded and not colored by the metric.</li>
+        </ul>
+    </section>
+
+    <section>
+        <ul>
+            <li>You can select metrics on the Color Metric panel. You can hide labels which are the names on top of the plot points, and hide gray points, which are channels with no metrics</li>
+            <li>Some metrics have all channels computed, (Centroid) metrics and Distance from Center.</li>
+            <li>Color scale will allow you to adjust the color mapping of the metrics. In cases where there is a massive outlier.</li>
+            <li>Correlation view will allow you to see the relationships between different metrics.</li>
+            <li>Fightin Words were not computed.</li>
+        </ul>
+    </section>
+
+    <section>
+        <ul>
+            <li>Focus Text will allow you to focus on one channel. It turns the channel into a star.</li>
+            <li>The Similarity: checkbox affects "Show semantic connections"</li>
+            <li>This checkbox causes the focus to have tendrils, the red tendrils are closer and bluer ones are farther.</li>
+            <li>With the slider you can adjust how many connections are seen on the map, keep it low bc of lag.</li>
+        </ul>
+    </section>
+
+    <section>
+        <ul>
+            <li>The "Hide texts outside focused text cluster" checkbox allows you to hide channel points that are outside the focused text cluster.</li>
+            <li>You can choose which clustering mode to use, regular Leiden clusterings are made for the semantic map.</li>
+            <li>If you want to explore similar speaking styles of different niches, go with Burrows clusterings.</li>
+        </ul>
+    </section>
+
+    <section>
+        <ul>
+            <li>Experimental mode is accessed from the bottom left corner.</li>
+            <li>Your focus channels settings will change to burrows</li>
+        </ul>
+    </section>
+
+    <section>
+        <ul>
+            <li>You can access Function Word Frequency map on the top left, Delta Explorer on the bottom left.</li>
+        </ul>
+    </section>
+
+    <section>
+        <ul>
+            <li>Function Word Frequency makes you see a PDF curve</li>
+            <li>the middle "peak" of the PDF is the corpus mean, the average usage for that word in the corpus.</li>
+            <li>You can change it to a CDF curve in View: in the function word frequency main panel.</li>
+            <li>You can select function words to display in the map.</li>
+            <li>You can display many but it is currently annoying to do so.</li>
+            <li>I recommend using the search bar to filter the words you want and them select to select multiple, instead of scrolling in the display of words.</li>
+            <li>Word stats show stats based on the selection. if you have set a focus channel, more stats will show.</li>
+        </ul>
+    </section>
+
+    <section>
+        <ul>
+            <li>There is a "Show Cluster Stats" button.</li>
+            <li>Clicking any of the "Top contributing words" will reset your current function word selection, for the one you picked.</li>
+            <li>Red function words are those that are most characteristic of the selected focus cluster. Blue is not.</li>
+            <li>The grey percentage shows how much the word contributes to the burrows delta scoring.</li>
+            <li>You can sort the function words with sort: options. Choose what looks best.</li>
+            <li>You can filter the function words with the sign: option. Choose to only show positives or negatives</li>
+            <li>"Check a Word:" updates "Cluster stats for:" to let you see stats in detail without rounding.</li>
+        </ul>
+    </section>
+
+    <section>
+        <ul>
+            <li>Changing "Compare:" to "Another Cluster" will unlock the evil focus and it's cluster, which helps compare clusters.</li>
+            <li>Select an evil focus channel and it will autoselect the cluster that evil focus is in.</li>
+        </ul>
+    </section>
+
+    <section>
+        <ul>
+            <li>From the button on the bottom left corner, you can access the Explore Delta mode which allows you to compare 2 channels instead of clusters.</li>
+            <li>The midline is the corpus mean, the average usage for that word in the corpus.</li>
+            <li>Sort modes help you organize the function words in different ways.</li>
+            <li>You can find what words separate a channel from the other, what words bring them together, and what word do they both use in usual freeuencies from the mean.</li>
+            <li>Delta Explorer Stats panel helps verbalize the differences.</li>
+        </ul>
+    </section>
+
+    <section>
+            
+        <h2>More:</h2>
+        <p>If you like Burrows Delta, you should look into Bayesian log odds and the Fightin' Words algorithm.</p>
+        <p>Bayesian Log odds in the Fightin' Words algorithm can help find phrases that make a channel unique.</p>
+        <p>It is a cool method especially when it is run on unique channels like Ctop.</p>
+    
+    </section>
+
+        
+    <h1>Random GIF:</h1>
+    <img src="image.gif" alt="random gif" style="width: 50%;">
+
+    <script src="gameologist.js"></script>
+</body>
+</html>
